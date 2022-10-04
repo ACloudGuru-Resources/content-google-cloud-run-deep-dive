@@ -59,7 +59,7 @@ def display(imagename):
     blob = bucket.blob(imagename)
     with tempfile.NamedTemporaryFile() as temp:
         blob.download_to_filename(temp.name)
-        return send_file(temp.name, attachment_filename=imagename)
+        return send_file(temp.name)
 
 
 if __name__ == '__main__':
