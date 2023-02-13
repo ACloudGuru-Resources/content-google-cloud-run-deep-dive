@@ -18,6 +18,8 @@ steps:
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
+  - '--max-instances'
+  - '2'
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args: [ '-c', 'gcloud run services update image-gallery --platform managed --region us-east1 --set-env-vars=API_KEY=$(cat decrypted.txt)' ]
