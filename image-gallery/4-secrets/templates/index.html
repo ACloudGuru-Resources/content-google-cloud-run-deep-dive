@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
-
+<style>
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 16px;
+}
+div {
+   width: 80%;
+   margin: 0 auto 0 auto;
+}
+</style>
 <head>
     <title>Image Gallery</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 </head>
 
 <body>
-    <p>{{ qotd }}</p>
+    <div>
+    <h1> 1 IMAGE :: 1 QUOTE </h1>
+    <h2>Give me an image and I'll give you a quote</h2>
+    <h3><em></em>{{ qotd }}</em></h3>
 
     <form action="/upload" method="POST" enctype="multipart/form-data">
         <label for="description">Description</label>
@@ -26,6 +43,7 @@
         </li>
         {% endfor %}
     </ul>
+    </div>
 </body>
 
 </html>
